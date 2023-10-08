@@ -42,7 +42,10 @@ public class Image {
             this.width = bufferedImage.getWidth();
             this.height = bufferedImage.getHeight();
 
-            this.dataRGB = new int[width][height];
+            this.dataRGB = new int[height][width];
+
+            System.out.println(width);
+            System.out.println(height);
 
             // Обход каждого пикселя изображения и запись его значения в матрицу
             for (int i = 0; i < height; i++) {
