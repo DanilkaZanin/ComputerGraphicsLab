@@ -44,9 +44,6 @@ public class Image {
 
             this.dataRGB = new int[height][width];
 
-            System.out.println(width);
-            System.out.println(height);
-
             // Обход каждого пикселя изображения и запись его значения в матрицу
             for (int i = 0; i < height; i++) {
                 for (int j = 0; j < width; j++) {

@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.out.ImageSaver;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,31 +17,7 @@ public class Main {
 
         ArrayList<int[][]> list = ColorModel.fromRgbToYCbCr(myImage.getDataRGB());
 
-
-
-
-        int pixelData[][] = ColorModel.fromYCbCrToRgb(list); // МЕНЯТЬ ТУТ
-
-
-        int height = pixelData.length;
-        int width = pixelData[0].length;
-
-        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                int rgb = pixelData[i][j];
-                image.setRGB(j, i, rgb);
-            }
-        }
-
-        try {
-            File output = new File("imageY.png");
-            ImageIO.write(image, "png", output);
-            System.out.println("Изображение успешно создано.");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        ImageSaver.saveChannelMatrix(list.get(1),"cbImage.png","RGB");
     }
 }
 /*
@@ -91,3 +69,26 @@ public class Main {
         File outputY = new File("cb_channel.png");
         ImageIO.write(yImage, "png", outputY);
 */
+
+/*int pixelData[][] = ColorModel.fromYCbCrToRgb(list); // МЕНЯТЬ ТУТ
+
+
+        int height = pixelData.length;
+        int width = pixelData[0].length;
+
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                int rgb = pixelData[i][j];
+                image.setRGB(j, i, rgb);
+            }
+        }
+
+        try {
+            File output = new File("imageY.png");
+            ImageIO.write(image, "png", output);
+            System.out.println("Изображение успешно создано.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/

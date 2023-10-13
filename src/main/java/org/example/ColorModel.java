@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ColorModel {
 
     /**Метод преобразует RGB матрицу в YCbCr
-     * @return ArrayList<int[][]> - возвращаемым значением буте список матриц:
+     * @return ArrayList<int[][]> - возвращаемым значением будет список матриц:
      * Матрица Y имеет индекс 0.
      * Матрица Cb имеет индекс 1.
      * Матрица Cr имеет индекс 2.

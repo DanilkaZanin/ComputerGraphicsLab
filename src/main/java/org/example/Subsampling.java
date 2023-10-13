@@ -25,27 +25,8 @@ public class Subsampling {
             }
         }
 
-        // Возвращаем результат субдескретизации
+        // Возвращаем результат субдискретизации
         return new AbstractMap.SimpleEntry<>(subsampledCb,subsampledCr);
     }
 
-
-    public static void main(String[] args) {
-        // Пример использования
-        int[][] cbChannel = {{128, 192, 128, 192}, {192, 128, 192, 128}, {128, 192, 128, 192}, {192, 128, 192, 128}};
-        int[][] crChannel = {{64, 128, 64, 128}, {128, 64, 128, 64}, {64, 128, 64, 128}, {128, 64, 128, 64}};
-
-        AbstractMap.SimpleEntry<int[][],int[][]> entry = subsample420(cbChannel,crChannel);
-
-        cbChannel = entry.getKey();
-
-        for (int i = 0; i < cbChannel.length ; i++) {
-            for (int j = 0; j < cbChannel[0].length; j++) {
-                System.out.print(cbChannel[i][j] + " ");
-            }
-            System.out.println(" ");
-        }
-
-        // Теперь cbChannel и crChannel содержат результаты субдискретизации с измененной размерностью
-    }
 }
