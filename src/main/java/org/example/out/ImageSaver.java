@@ -1,5 +1,7 @@
 package org.example.out;
 
+import org.example.entity.Image;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -42,6 +44,27 @@ public class ImageSaver {
             File outputFile = new File(outputFileName);
             ImageIO.write(image, "png", outputFile);
             System.out.println("Изображение сохранено в " + outputFileName);
+        } catch (Exception e) {
+            System.out.println("Ошибка при сохранении изображения: " + e.getMessage());
+        }
+    }
+
+    public static void saveImage(Image image, String fileName){
+        // Создаем новое изображение с размерами матрицы и типом цветовой модели
+        BufferedImage newImage =  new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
+
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                int value = image.getRGB(x,y);
+                newImage.setRGB(x,y,value);
+            }
+        }
+
+        // Сохраняем изображение в файл
+        try {
+            File outputFile = new File(fileName);
+            ImageIO.write(newImage, "png", outputFile);
+            System.out.println("Изображение сохранено в " + fileName);
         } catch (Exception e) {
             System.out.println("Ошибка при сохранении изображения: " + e.getMessage());
         }

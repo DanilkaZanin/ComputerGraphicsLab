@@ -1,6 +1,6 @@
-import org.example.ColorModel;
-import org.example.Image;
-import org.example.Subsampling;
+import org.example.nenyjnoe.ColorModel;
+import org.example.entity.Image;
+import org.example.nenyjnoe.Subsampling;
 import org.example.out.ImageSaver;
 import org.junit.Test;
 

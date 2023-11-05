@@ -1,4 +1,4 @@
-package org.example;
+package org.example.nenyjnoe;
 
 import java.util.AbstractMap;
 public class Subsampling {

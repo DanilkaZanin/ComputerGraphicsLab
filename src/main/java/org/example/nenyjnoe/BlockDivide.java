@@ -1,4 +1,4 @@
-package org.example;
+package org.example.nenyjnoe;
 public class BlockDivide {
     private static final int BLOCK_SIZE = 8;
 
