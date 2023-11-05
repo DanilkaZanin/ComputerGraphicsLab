@@ -15,7 +15,7 @@ public class Main {
 
         Image myImage = new Image(path);
 
-        Image newImage = LaplacianOperator.applyLaplacianOperator(myImage);
+        Image newImage = LaplacianOperator.applySobelOperator(myImage);
 
         ImageSaver.saveImage(newImage,"Jopa.png");
     }
