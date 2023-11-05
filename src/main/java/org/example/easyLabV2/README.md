@@ -7,7 +7,7 @@
 
 ![](https://github.com/DanilkaZanin/ComputerGraphicsLab/blob/master/src/main/java/org/example/images/easyLabV2/AfterLaplasianOperathor/LaplasianOperathor.png)
 
-После оператора Кобертса
+После оператора Робертса
 
 ![](https://github.com/DanilkaZanin/ComputerGraphicsLab/blob/master/src/main/java/org/example/images/easyLabV2/AfterRobertsOperator/RobertsOperathor.png)
 
