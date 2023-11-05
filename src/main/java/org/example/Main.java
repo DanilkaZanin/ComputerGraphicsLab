@@ -1,12 +1,10 @@
 package org.example;
 
-import org.example.easyLabV2.laplasianOperator.LaplacianOperator;
+import org.example.easyLabV2.Operator;
 import org.example.entity.Image;
-import org.example.nenyjnoe.ColorModel;
 import org.example.out.ImageSaver;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -15,7 +13,7 @@ public class Main {
 
         Image myImage = new Image(path);
 
-        Image newImage = LaplacianOperator.applySobelOperator(myImage);
+        Image newImage = Operator.applySobelOperator(myImage);
 
         ImageSaver.saveImage(newImage,"Jopa.png");
     }

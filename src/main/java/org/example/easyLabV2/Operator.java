@@ -1,10 +1,10 @@
-package org.example.easyLabV2.laplasianOperator;
+package org.example.easyLabV2;
 
 import org.example.entity.Image;
 
 import java.awt.*;
 
-public class LaplacianOperator {
+public class Operator {
     public static Image applyLaplacianOperator(Image image) {
         int width = image.getWidth();
         int height = image.getHeight();
